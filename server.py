@@ -41,7 +41,7 @@ def compare():
     if request.form['birthdate'][2:10] == mrz_birth:
         comparison['birthdate'] = 'ok'
     else:
-        comparison['birthdate'] = f'wrong - Expected: ({mrz_birth}) Given: ({request.form['birthdate'][2:10]})'
+        comparison['birthdate'] = f'wrong - Expected: ({mrz_birth}) Given: ({request.form["birthdate"][2:10]})'
 
     return render_template('compare.html', comparison=comparison)
 
